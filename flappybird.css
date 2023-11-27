@@ -1,0 +1,29 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0; /* Reset margin */
+    background-color: black; /* Set background color to black */
+    overflow: hidden; /* Hide any content outside the viewport */
+}
+
+#board {
+    /* Your existing styles */
+    background-image: url("./skyyy.jpg");
+    background-size: cover; /* Adjust the background size */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the background image */
+}
+
+@media screen and (max-width: 390px) and (max-height: 844px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #board {
+        width: 390px;
+        height: 844px;
+        /* Additional styles for the board */
+    }
+}
