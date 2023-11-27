@@ -3,11 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Flappy Bird</title>
+        <title>Flappy doraemon</title>
         <link rel="stylesheet" href="flappybird.css">
         <script src="flappybird.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="https://i.postimg.cc/QC3CPDLc/bird-copy.png">
+
     </head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide vertical scrollbar */
+            position: relative; /* Set body to relative positioning */
+        }
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #4ec0ca;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Bungee', sans-serif; /* Apply Bungee font */
+            font-size: 19px;
+            padding: 5px 0;
+        }
+        .footer a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #11a00a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .footer a:hover {
+            background-color: #53a428;
+            color: #ffffff;
+        }
+    </style>
+    
     <body>
         <canvas id="board"></canvas>
+        <div class="footer">
+            <a href="https://www.instagram.com/angel0kai/?utm_source=qr" target="_blank" rel="noopener noreferrer">
+            Created by Angel 😇
     </body>
 </html>
