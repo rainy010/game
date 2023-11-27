@@ -6,8 +6,8 @@ let boardHeight = 640;
 let context;
 
 //bird
-let birdWidth = 40; //width/height ratio = 408/228 = 17/12
-let birdHeight = 32;
+let birdWidth = 36; //width/height ratio = 408/228 = 17/12
+let birdHeight = 27;
 let birdX = boardWidth/8;
 let birdY = boardHeight/2;
 let birdImg;
@@ -22,7 +22,7 @@ let bird = {
 //pipes
 let pipeArray = [];
 let pipeWidth = 64; //width/height ratio = 384/3072 = 1/8
-let pipeHeight = 512;
+let pipeHeight = 412;
 let pipeX = boardWidth;
 let pipeY = 0;
 
@@ -30,7 +30,7 @@ let topPipeImg;
 let bottomPipeImg;
 
 //physics
-let velocityX = -2; //pipes moving left speed
+let velocityX = -5; //pipes moving left speed
 let velocityY = 0; //bird jump speed
 let gravity = 0.3;
 
@@ -72,8 +72,9 @@ window.onload = function() {
     groundImg.src = "./base copy.png";
 }
 
+
 function handleTap() {
-    velocityY = -7;
+    velocityY = -4;
 
     // Toggle the flipped state
     isFlipped = !isFlipped;
@@ -166,7 +167,7 @@ function placePipes() {
     // 0 -> -128 (pipeHeight/4)
     // 1 -> -128 - 256 (pipeHeight/4 - pipeHeight/2) = -3/4 pipeHeight
     let randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
-    let openingSpace = board.height/4;
+    let openingSpace = board.height/3;
 
     let topPipe = {
         img : topPipeImg,
@@ -188,7 +189,6 @@ function placePipes() {
     }
     pipeArray.push(bottomPipe);
 }
-
 function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
         //jump
